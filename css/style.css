@@ -38,7 +38,7 @@ ul{
 .header{
     background-color: rgb(24, 49, 71);
     box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
 }
