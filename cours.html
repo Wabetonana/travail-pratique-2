@@ -8,17 +8,112 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo du site"></a>
-        </div>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="communaute.html">Communauté</a></li>
-            <li><a href="cours.html">Cours</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt=""><span class="letecode" style="color: white;"></span>
+        </a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="communaute.html">Communauté</a> </li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+        <main>
+            <div class="cours-groupe-1">
+                <div class="groupe-un">
+                    <img src="images/logo.png" alt="Image cours">
+                    <div class="card-body">
+                        <p class="">
+                            <h3>Git et GitHub</h3>
+                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+                <div class="groupe-un">
+                    <img src="images/logo.png" alt="Image cours">
+                    <div class="card-body">
+                        <p class="">
+                            <h3>HTML5</h3>
+                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+                <div class="groupe-un">
+                    <img src="images/logo.png" alt="Image cours">
+                    <div class="card-body">
+                        <p class="">
+                            <h3>CSS3</h3>
+                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cours-groupe-2">
+                <div class="groupe-un">
+                    <img src="images/logo.png" alt="Image cours">
+                    <div class="card-body">
+                        <p class="t">
+                            <h3>FlexBox</h3>
+                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+                <div class="groupe-un">
+                    <img src="images/logo.png" alt="Image cours">
+                    <div class="card-body">
+                        <p class="">
+                            <h3>Responsive</h3>
+                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+                <div class="groupe-un">
+                    <img src="images/logo.png" alt="Image cours">
+                    <div class="card-body">
+                        <p class="">
+                            <h3>Animations</h3>
+                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-letter">
+                <div class="text-accrocheur">
+                    <h2>Abonnez vous à la boite aux lettres</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas atque, vero quod dolor voluptas ad. Fuga illo veritatis mollitia voluptatum ab quisquam corrupti ut, hic ipsa, animi ex velit dolores.
+                    </p>
+                </div>
+    
+                <div class="form-news">
+                    <form action="">
+                        <div>
+                            <input type="email" class="txtzone" placeholder="Votre email">
+                        </div>
+                        <div>
+                            <input type="submit" value="S abonner">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                Développé par Letecode @2023
+            </p>
+        </footer>
 </body>
 </html>

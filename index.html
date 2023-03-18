@@ -8,55 +8,66 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo du site"></a>
-        </div>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="communaute.html">Communauté</a></li>
-            <li><a href="cours.html">Cours</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt=""><span class="letecode" style="color: white;"></span>
+        </a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="communaute.html">Communauté</a> </li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main>
+        <article class="bienvenu-texte">
             <h1>Bienvenue sur notre site</h1>
             <p>Nous vous apprenons à changer le monde avec votre créativité.</p><br>
             <span><a href="contact.html" class="call-to-action-call">Nous contacter</a></span>
-    </header>
+        </article>
 
-    <div class="head2">
-        <div>
-            <img src="images/logo.png" alt="">
-        </div>
-        <div class="parag1">
-            <h3>Vous avez droit d'apprendre</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto perspiciatis nulla provident? Earum veritatis consectetur, corrupti iusto modi porro, ducimus ad explicabo ut quas dicta, dolore laboriosam velit dignissimos aliquid!</p>
-        </div>
-    </div>
+        <article class="droit-apprendre-texte">
+            <div>
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="parag1">
+                <h3>Vous avez droit d'apprendre</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto perspiciatis nulla provident? Earum veritatis consectetur, corrupti iusto modi porro, ducimus ad explicabo ut quas dicta, dolore laboriosam velit dignissimos aliquid!</p>
+            </div>
+        </article>
 
-    <section>
-        <h3>A propos de nous</h3>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero commodi odio rem quo error laborum sint ut non labore accusamus quis fugiat, animi tenetur cumque eos aliquam. Corporis, neque aut.
-        </p><br>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam amet iste aperiam pariatur tempora dicta eaque voluptatem reprehenderit omnis consequuntur iure voluptas, ab quisquam voluptate laboriosam natus consectetur, blanditiis expedita.
-        </p><br>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae sint quaerat temporibus doloribus magni eligendi eaque aut in natus consectetur delectus odit porro explicabo nihil, itaque fugit expedita distinctio?
-        </p><br>
-        <p>
-            <h3>Les options :</h3>
-                <ol>
-                    <li>- Git et GitHub</li>
-                    <li>- Html5</li>
-                    <li>- Css3</li>
-                    <li>- Javascript</li>
-                </ol>
-        </p>
-    </section>
+        <article class="apropos">
+            <h2>A propos de nous</h2><br>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto repudiandae voluptate dignissimos ipsa aspernatur, fugit doloremque atque rerum adipisci? Similique perspiciatis animi provident quam sed natus sint. Provident, architecto corporis!
+            </p><br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error rem cumque laboriosam, dolor aliquid sed possimus esse, officiis nobis eveniet maiores enim quia quisquam delectus soluta saepe reprehenderit aliquam.
+            </p><br>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, quisquam reprehenderit. Beatae consequuntur labore, sit aut tempora, dicta nihil doloribus sequi modi ipsum cupiditate consequatur quia, dolorem ad rerum temporibus.
+            </p><br>
+            <p>
+                <h3>Les options :</h3>
+                    <ul>
+                        <li>- Git et GitHub</li>
+                        <li>- Html5</li>
+                        <li>- Css3</li>
+                        <li>- Javascript</li>
+                    </ul>
+            </p>
+        </article>
+    </main>
 
     <footer>
         <p>

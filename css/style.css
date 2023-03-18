@@ -1,105 +1,196 @@
+/* Suppression des marges et tout autre espace */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*
-Definition de la police
-*/
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+
+/* Redimensionnement du logo */
+.logo img{
+    height: 50px;
+    width: 150px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Definition police texte et couleur */
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/*
-Bar de navigation couleur longueur et largeur
-*/
-nav{
-    background-color: rgb(24, 49, 71);
-    width: 100%;
-    height: 60px;
-}
-
-/*
-Logo
-*/
-.logo img{
-    height: 50px;
-    width: 150px;
-    float: left;
-    padding-left: 40px;
-}
-
-/*
-Positionnement liste
-*/
-ul{
-    float: right;
-    position: relative;
-    right: 10%;
-}
-
-/*
-Mise en forme item liste
-*/
- ul li{
-    list-style-type: none;
-    display: inline-block;
-}
-
-ol li{
-    list-style-type: none;
-}
-
-/*
-Mise en forme lien
-*/
-ul li a{
-    line-height: 55px;
+/* Suppression soulignement lien */
+a{
     text-decoration: none;
-    color: aliceblue;
+}
+
+/* Suppression puce lien */
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: rgb(24, 49, 71);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    background-color: rgb(36, 42, 48);
+
+}
+
+.menu a{
+    display: block;
+    padding: 5px;
+    padding-right: 20px;
+    color: var(--white);
+    line-height: 50px;
+}
+
+.menu a:hover{
+    background-color: grey;
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
 }
 
 /*
 Entete page accueil
 */
-header{
+main .bienvenu-texte{
     margin-top: 10px;
     margin-left: 35%;
     margin-bottom: 20px;
+    margin-right: 35px;
 }
 
 /*
-Text accueil mise en retrait
+Disposition texte et image sur le droit d apprendre
 */
-header p{
-    text-indent: 20px;
-}
-
-header a{
-    text-decoration: none;
-    padding-left: 15%;
-    color: brown;
-    border: 2px solid red;
-    border-radius: 15px;
-    padding-top: 10px;
-}
-
-.head2{
+main .droit-apprendre-texte{
     width: 100%;
     height: 155px;
     background-color: rgb(226, 222, 215);
     display: flex;
 }
 
-.head2 img{
-    margin-left: 200px;
-    margin-top: 30px;
+main .droit-apprendre-texte img{
+    margin-left: 100px;
+    margin-top: 20px;
     width: 200px;
 }
 
+main .droit-apprendre-texte .parag1{
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-left: 70px;
+    overflow: auto;
+}
+
+
 /*
-Page de accueil
+Text accueil mise en retrait
+*/
+main .bienvenu-texte p{
+    text-indent: 20px;
+}
+
+/*
+Style pour tous les liens afin d avoir l apperence de bouttton
 */
 .call-to-action-call{
     background-color: #d3056c;
@@ -110,73 +201,104 @@ Page de accueil
     cursor: pointer;
 }
 
-.parag1{
-    padding-left: 200px;
-    padding-top: 30px;
-    padding-right: 300px;
-}
-
-section{
+/*
+Texte apropos page d accueil
+*/
+main .apropos{
     margin-left: 50px;
     margin-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: justify;
 }
-
 
 /*
-Page de contact
+Page de cours
 */
-.entete{
+main .cours-groupe-1{
     margin-top: 10px;
-    margin-left: 100px;
-    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    overflow: scroll;
 }
 
-.form-contact{
-    margin-left: 100px;
+main .cours-groupe-2{
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    overflow: scroll;
 }
 
-.txtzone{
+main .cours-groupe-1 img{
     width: 400px;
-    height: 30px;
-    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.textarea{
+main .cours-groupe-1 .card-body{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main .cours-groupe-2 img{
     width: 400px;
-    height: 90px;
-    border-radius: 10px;
-  }
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
-input[type=submit] {
-    background-color: #d3056c;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
+main .cours-groupe-2 .card-body{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
-  .boitelettre{
+main .groupe-un{
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-top: 10px;
+    margin-right: 2em;
+    margin-left: 2em;
+    padding: 10px 10px 10px 10px;
+}
+
+main .news-letter{
     width: 100%;
     background-color: darkgray;
     display: flex;
 }
 
 .text-accrocheur{
-    padding-left: 150px;
+    margin-left: 20px;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
-.email-txt{
-    padding-right: 200px;
+.form-news{
+    margin-right: 20px;
     padding-top: 20px;
+    width: 400px;
+    height: 30px;
 }
 
+.form-news [type=email]{
+    width: 200px;
+    height: 30px;
+    border: #d3056c;
+    border-radius: 10px;
+}
 
+.form-news [type=submit]{
+    width: 200px;
+    height: 30px;
+    background-color: #d3056c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
+/* Code pour le footer*/
 footer{
     background-color: rgb(24, 49, 71);
     height: 80px;
