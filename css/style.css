@@ -220,7 +220,6 @@ main .cours-groupe-1{
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    overflow: scroll;
 }
 
 main .cours-groupe-2{
@@ -228,7 +227,6 @@ main .cours-groupe-2{
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    overflow: scroll;
 }
 
 main .cours-groupe-1 img{
