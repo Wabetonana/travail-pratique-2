@@ -8,17 +8,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo du site"></a>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt=""><span class="letecode" style="color: white;"></span>
+        </a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="communaute.html">Communauté</a> </li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="news-letter">
+            <div class="text-accrocheur">
+                <h2>Abonnez vous à la boite aux lettres</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas atque, vero quod dolor voluptas ad. Fuga illo veritatis mollitia voluptatum ab quisquam corrupti ut, hic ipsa, animi ex velit dolores.
+                </p>
+            </div>
+
+            <div class="form-news">
+                <form action="">
+                    <div>
+                        <input type="email" class="txtzone" placeholder="Votre email">
+                    </div>
+                    <div>
+                        <input type="submit" value="S abonner">
+                    </div>
+                </form>
+            </div>
         </div>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="communaute.html">Communauté</a></li>
-            <li><a href="cours.html">Cours</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    </main>
+
+    <footer>
+        <p>
+            Développé par Letecode @2023
+        </p>
+    </footer>
 </body>
 </html>
 

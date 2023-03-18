@@ -38,7 +38,7 @@ ul{
 .header{
     background-color: rgb(24, 49, 71);
     box-shadow: 1px 1px 5px 0px var(--gray);
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
 }
@@ -133,6 +133,11 @@ ul{
         width: fit-content;
         background-color: transparent;
     }
+
+    .form-contact {
+        grid-template-columns: repeat(auto-fit,minmax(70%, 1fr));
+      }
+
     .menu li{
         float: left;
     }
@@ -294,6 +299,63 @@ main .news-letter{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+/*
+Page de contact
+*/
+.entete{
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.form-contact{
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid: auto / auto auto;
+    grid-gap: 30px;
+}
+
+.form-contact [type=submit]{
+    width: 200px;
+    height: 30px;
+    background-color: #d3056c;
+    color: white;
+    margin-left: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-contact-txt{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.bloc{
+    position: relative;
+    width: 100%;
+    margin: 5px 20px 20px 0;
+    transition: 0.5s;
+}
+
+.form-contact label {
+    line-height: 40px;
+    color: #1f1c1c;
+    font-size: 24px;
+    display: block;
+    pointer-events: none;
+}
+
+.form-contact-txtarea{
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
 }
 
 /* Code pour le footer*/
