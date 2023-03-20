@@ -5,197 +5,82 @@
     box-sizing: border-box;
 }
 
-:root{
-    --white: #f9f9f9;
-    --black: #36383F;
-    --gray: #85888C;
-} /* variables*/
-
-/* Redimensionnement du logo */
-.logo img{
-    height: 50px;
-    width: 150px;
-    margin-left: 10px;
-    display: inline-block;
-}
-
-/* Definition police texte et couleur */
+/*
+Definition de la police
+*/
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Suppression soulignement lien */
-a{
-    text-decoration: none;
-}
-
-/* Suppression puce lien */
-ul{
-    list-style: none;
-}
-
-/* Header */
-.header{
+/*
+Bar de navigation couleur longueur et largeur
+*/
+nav{
     background-color: rgb(24, 49, 71);
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: relative;
-    top: 0;
     width: 100%;
-}
-
-/* Nav menu */
-.nav{
-    width: 100%;
-    position: fixed;
-    background-color: var(--black);
-    overflow: hidden;
-    background-color: rgb(36, 42, 48);
-
-}
-
-.menu a{
-    display: block;
-    padding: 5px;
-    padding-right: 20px;
-    color: var(--white);
-    line-height: 50px;
-}
-
-.menu a:hover{
-    background-color: grey;
-}
-
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
-}
-
-/* Menu Icon */
-.hamb{
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}/* Style label tag */
-
-.hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-
-} /* Style span tag */
-
-.hamb-line::before,
-.hamb-line::after{
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-.hamb-line::before{
-    top: 5px;
-}
-.hamb-line::after{
-    top: -5px;
-}
-
-.side-menu {
-    display: none;
-} /* Hide checkbox */
-
-/* Toggle menu icon */
-.side-menu:checked ~ nav{
-    max-height: 100%;
-}
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-}
-
-/* Responsiveness */
-@media (min-width: 768px) {
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-
-    .form-contact {
-        grid-template-columns: repeat(auto-fit,minmax(70%, 1fr));
-      }
-
-    .menu li{
-        float: left;
-    }
-
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--gray);
-
-    }
-
-    .hamb{
-        display: none;
-    }
+    height: 60px;
+    position: sticky;
+    top: 0px;
 }
 
 /*
-Entete page accueil
+Positionnement liste
 */
-main .bienvenu-texte{
+nav ul{
+    float: right;
+    position: relative;
+    right: 10%;
+}
+
+/*
+Mise en forme item liste
+*/
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+/*
+Mise en forme lien
+*/
+nav ul li a{
+    line-height: 55px;
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 1em;
+}
+
+/*
+Mise en forme lien au survole
+*/
+nav ul li :hover{
+    color: #d3056c;
+    border-bottom: 2px double #d3056c;
+}
+
+/*
+Logo
+*/
+.logo img{
+    height: 50px;
+    width: 150px;
+    float: left;
+    padding-left: 40px;
+}
+
+ol li{
+    list-style-type: none;
+}
+
+/* Texte de bienvenu sur la page accueil*/
+.text-bienvenu{
     margin-top: 10px;
     margin-left: 35%;
     margin-bottom: 20px;
-    margin-right: 35px;
 }
 
 /*
-Disposition texte et image sur le droit d apprendre
-*/
-main .droit-apprendre-texte{
-    width: 100%;
-    height: 155px;
-    background-color: rgb(226, 222, 215);
-    display: flex;
-}
-
-main .droit-apprendre-texte img{
-    margin-left: 100px;
-    margin-top: 20px;
-    width: 200px;
-}
-
-main .droit-apprendre-texte .parag1{
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-left: 70px;
-    overflow: auto;
-}
-
-
-/*
-Text accueil mise en retrait
-*/
-main .bienvenu-texte p{
-    text-indent: 20px;
-}
-
-/*
-Style pour tous les liens afin d avoir l apperence de bouttton
+Page de accueil
 */
 .call-to-action-call{
     background-color: #d3056c;
@@ -204,160 +89,54 @@ Style pour tous les liens afin d avoir l apperence de bouttton
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-/*
-Texte apropos page d accueil
-*/
-main .apropos{
+.bloc-droit-apprendre{
+    width: 100%;
+    height: 155px;
+    background-color: rgb(226, 222, 215);
+    display: flex;
+    padding-top: 25px;
+    padding-right: 50px;
+}
+
+.bloc-droit-apprendre img{
+    margin-left: 70px;
+    width: 200px;
+}
+
+.apropos{
     margin-left: 50px;
     margin-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: justify;
 }
 
-/*
-Page de cours
-*/
-main .cours-groupe-1{
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-}
+/* Code pour le formulaire news letter*/
+    .news-letter{
+        width: 100%;
+        background-color: darkgray;
+        display: flex;
+        padding-left: 20px;
+    }
 
-main .cours-groupe-2{
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-}
+    .text-accrocheur{
+        padding-left: 30px;
+        padding-top: 20px;
+    }
 
-main .cours-groupe-1 img{
-    width: 400px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
+    .form-news{
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
 
-main .cours-groupe-1 .card-body{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-main .cours-groupe-2 img{
-    width: 400px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-main .cours-groupe-2 .card-body{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-main .groupe-un{
-    position: relative;
-    overflow: visible;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    margin-top: 10px;
-    margin-right: 2em;
-    margin-left: 2em;
-    padding: 10px 10px 10px 10px;
-}
-
-main .news-letter{
-    width: 100%;
-    background-color: darkgray;
-    display: flex;
-}
-
-.text-accrocheur{
-    margin-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-.form-news{
-    margin-right: 20px;
-    padding-top: 20px;
-    width: 400px;
-    height: 30px;
-}
-
-.form-news [type=email]{
-    width: 200px;
-    height: 30px;
-    border: #d3056c;
-    border-radius: 10px;
-}
-
-.form-news [type=submit]{
-    width: 200px;
-    height: 30px;
-    background-color: #d3056c;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-/*
-Page de contact
-*/
-.entete{
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-bottom: 20px;
-}
-
-.form-contact{
-    padding-left: 100px;
-    padding-right: 100px;
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid: auto / auto auto;
-    grid-gap: 30px;
-}
-
-.form-contact [type=submit]{
-    width: 200px;
-    height: 30px;
-    background-color: #d3056c;
-    color: white;
-    margin-left: 80px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.form-contact-txt{
-    width: 400px;
-    height: 40px;
-    border-radius: 10px;
-}
-
-.bloc{
-    position: relative;
-    width: 100%;
-    transition: 0.5s;
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
-.form-contact label {
-    line-height: 40px;
-    color: #1f1c1c;
-    font-size: 24px;
-    display: block;
-    pointer-events: none;
-}
-
-.form-contact-txtarea{
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-}
+    .form-news .txtzone {
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+    }
 
 /* Code pour le footer*/
 footer{

@@ -9,89 +9,40 @@
 </head>
 <body>
     <!-- Navigation bar -->
-    <header class="header">
-        <!-- Logo -->
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt=""><span class="letecode" style="color: white;"></span>
-        </a>
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <!-- Menu -->
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="communaute.html">Communauté</a> </li>
-                <li><a href="cours.html">Cours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo du site"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="communaute.html">Communauté</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
         
     <main>
-        <div class="contact">
-            <div class="entete">
-                <h1>Nous contacter</h1>
-                <p>
-                    Remplissez ce formulaire pour nous laisser un message
-                </p>
-            </div>
 
-            <div class="form-contact">
-                <div class="bloc">
-                    <label for="">Nom</label>
-                    <input type="text" class="form-contact-txt">
+            <div class="news-letter">
+                <div class="text-accrocheur">
+                    <h2>Abonnez vous à la boite aux lettres</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas atque, vero quod dolor voluptas ad. Fuga illo veritatis mollitia voluptatum ab quisquam corrupti ut, hic ipsa, animi ex velit dolores.
+                    </p>
                 </div>
-
-                <div class="bloc">
-                    <label for="">Pays</label>
-                    <select name="" id="" class="form-contact-txt">
-                        <option value="">Rdcongo</option>
-                        <option value="">Congo Brazzaville</option>
-                        <option value="">Angola</option>
-                    </select>
-                </div>
-
-                <div class="bloc">
-                    <label for="">Adresse e-mail</label>
-                    <input type="email" name="" id="" class="form-contact-txt">
-                </div>
-
-                <div class="bloc">
-                    <label for="">Objctif</label>
-                    <input type="text" class="form-contact-txt">
-                </div>
-
-                <div class="bloc">
-                    <label for="">Message</label>
-                    <textarea name="" class="form-contact-txtarea" cols="30" rows="10"></textarea>
-                </div>
-
-                <div class="btn">
-                    <input type="submit" value="Envozer le message" class="txtzone">
+    
+                <div class="form-news">
+                    <form action="">
+                        <div>
+                            <input type="email" class="txtzone" required placeholder="Votre email">
+                        </div>
+                        <div>
+                            <button type="submit" class="call-to-action-call">S abonner</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-
-        <div class="news-letter">
-            <div class="text-accrocheur">
-                <h2>Abonnez vous à la boite aux lettres</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas atque, vero quod dolor voluptas ad. Fuga illo veritatis mollitia voluptatum ab quisquam corrupti ut, hic ipsa, animi ex velit dolores.
-                </p>
-            </div>
-
-            <div class="form-news">
-                <form action="">
-                    <div>
-                        <input type="email" class="txtzone" placeholder="Votre email">
-                    </div>
-                    <div>
-                        <input type="submit" value="S abonner">
-                    </div>
-                </form>
-            </div>
-        </div>
     </main>
 
     <footer>
