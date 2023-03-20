@@ -62,10 +62,15 @@ nav ul li :hover{
 Logo
 */
 .logo img{
-    height: 50px;
+    height: 45px;
     width: 150px;
     float: left;
     padding-left: 40px;
+    padding-top: 20px;
+}
+
+.logo p{
+    color: white;
 }
 
 ol li{
